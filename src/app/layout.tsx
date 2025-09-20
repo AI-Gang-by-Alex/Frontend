@@ -2,6 +2,8 @@ import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 
+import { Container } from '@/components';
+
 import { Providers } from './providers';
 
 import '@mantine/core/styles.css';
@@ -35,7 +37,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Container className={'mt-16'}>{children}</Container>
+        </Providers>
       </body>
     </html>
   );
