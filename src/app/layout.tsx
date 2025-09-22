@@ -7,6 +7,7 @@ import { Container } from '@/components';
 import { Providers } from './providers';
 
 import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
 import './globals.css';
 
 const geistSans = Geist({
@@ -38,7 +39,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <Container className={'mt-16'}>{children}</Container>
+          <Container className={'my-16'}>{children}</Container>
         </Providers>
       </body>
     </html>

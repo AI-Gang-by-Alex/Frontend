@@ -18,7 +18,7 @@ interface PredictTableProps {
 
 export const PredictTable: FC<PredictTableProps> = props => {
   const rows = props.data.map(item => (
-    <TableTr>
+    <TableTr key={item.id}>
       <TableTd>{item.id}</TableTd>
       <TableTd>{item.text}</TableTd>
       <TableTd>

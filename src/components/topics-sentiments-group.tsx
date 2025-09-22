@@ -14,7 +14,7 @@ export const TopicsSentimentsGroup: FC<TopicsSentimentsGroupProps> = props => {
   const pairs = (
     <>
       {props.topics.map((topic, idx) => (
-        <div className={'flex justify-between'}>
+        <div className={'flex justify-between'} key={topic}>
           <Text>{topic}</Text>
           <SentimentRound sentiment={props.sentiments[idx]} />
         </div>
